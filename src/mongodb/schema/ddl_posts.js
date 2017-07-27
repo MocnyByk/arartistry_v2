@@ -8,7 +8,7 @@ db.createCollection("posts",
                 { plaintext: { $type: "string" }},
                 { memberCode: { $type: "string", $exists: true }},
                 { createDate: { $type: "timestamp", $exists: true }},
-                { contentsId: { $type: "ObjectId", $exists: true }}
+                { contentsId: { $type: "objectId", $exists: true }}
 			]
 		}
 	}

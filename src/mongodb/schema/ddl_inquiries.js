@@ -8,7 +8,7 @@ db.createCollection("inquiries",
                 { author: { $type: "string" }},
                 { email: { $type: "string" }},
                 { createDate: { $type: "timestamp", $exists: true }},
-                { markedRead: { $type: "boolean" }}
+                { markedRead: { $type: "bool" }}
 			]
 		}
 	}

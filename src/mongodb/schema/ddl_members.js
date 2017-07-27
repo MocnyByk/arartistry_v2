@@ -10,7 +10,7 @@ db.createCollection("members",
                 { lastActivity: { $type: "timestamp" }},
                 { failedLoginAttemps: { $type: "number" }},
                 { lastFailedLogin: { $type: "timestamp" }},
-                { locked: { $type: "boolean" }}
+                { locked: { $type: "bool" }}
 			]
 		}
 	}
