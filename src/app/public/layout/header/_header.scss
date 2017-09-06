@@ -1,0 +1,41 @@
+@import './../../../global';
+
+$bg-color: #333;
+$bg-color-active: #4CAF50;
+$bg-color-hover-not-active: #111;
+$fg-color-link-text: white;
+
+// The entire navigation bar
+.navbar-header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $bg-color;
+
+    // List Item within the bar
+    li {
+        float: left;
+
+        // The 'link' within the menu, also contains the text of
+        // the menu item.
+        a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+
+            // While hovering and the current item is not the active
+            // selection
+            &:hover:not(.navbar-active){
+                background-color: $bg-color-hover-not-active;
+            }
+        }
+    }
+}
+
+// Highlight the menu item that is selected
+.navbar-active {
+    background-color: $bg-color-active;
+}

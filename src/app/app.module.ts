@@ -4,31 +4,42 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+// App Level Items
 import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
-import { FooterComponent } from './shared/layout/footer/footer.component';
-import { HeaderComponent } from './shared/layout/header/header.component';
+import { AppRoutes } from './app.routing';
 
-const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: false });
+// Public Items
+import { PublicComponent } from './public/public.component';
+import { HomeComponent } from './public/home/home.component';
+import { HeaderComponent } from './public/layout/header/header.component';
+import { FooterComponent } from './public/layout/footer/footer.component';
 
 /*
-  To start running, enter 'ng serve --o'
+  To start running, enter 'npm start'
 */
 
 @NgModule({
   declarations: [
     AppComponent,
+
+    // Shared Items
+    HeaderComponent,
     FooterComponent,
-    HeaderComponent
+
+    // Public Items
+    PublicComponent,
+      HomeComponent
+
+    // Admin Items
   ],
   imports: [
-    rootRouting,
+    AppRoutes,
     BrowserModule,
     FormsModule,
-    HttpModule,
-    HomeModule
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

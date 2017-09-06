@@ -1,7 +1,5 @@
+@import './reset';
 @import './global';
-@import './shared/layout/footer/footer';
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
+@import './public/layout/header/header';
+@import './public/layout/footer/footer';
