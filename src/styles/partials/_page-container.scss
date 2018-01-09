@@ -1,0 +1,38 @@
+/* (Abr. MJT) http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page */
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+#page-container {
+    min-height: 100;
+    position: relative;
+}
+
+#page-header {
+    background: #ff0;
+    padding: $g-header-height;
+}
+
+#page-body {
+    padding: $g-header-height;
+    padding-bottom: $g-footer-height;
+}
+
+#page-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $g-footer-height;
+    background: #6cf;
+}
+
+// IE 6 and IE 5.5
+#page-container {
+    height: 100%;
+}
+
+/* End MJT credits */
