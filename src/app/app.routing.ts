@@ -1,13 +1,14 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PublicComponent } from 'app/public/public.component';
+import { PublicModule } from 'app/public/public.module';
 import { PublicRoutes } from 'app/public/public.routes';
-import { AdminComponent } from 'app/admin/admin.component';
 import { AdminRoutes } from 'app/admin/admin.routes';
+import { NotFoundComponent } from './error-pages/notfound/not-found.component';
 
 const routes: Routes = [
-    { path: '', component: PublicComponent, children: PublicRoutes },
-    { path: 'admin', loadChildren: './admin/admin.module#AdminModule' }
+    { path: 'admin', loadChildren: './admin/admin.module#AdminModule' },
+    { path: '', loadChildren: './public/public.module#PublicModule' },
+    { path: '**', component: NotFoundComponent }
     // { path: '', component: PublicComponent, data: { title: 'Public Views' }, children: PublicRoutes }
     // { path: '', component: AdminComponent, data: { title: 'Admin Views' }, children: ADMIN_ROUTES }
 ];

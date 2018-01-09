@@ -8,11 +8,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 
-// Public Items
-import { PublicComponent } from './public/public.component';
-import { HomeComponent } from './public/home/home.component';
-import { HeaderComponent } from './public/layout/header/header.component';
-import { FooterComponent } from './public/layout/footer/footer.component';
+// Shared Items
+import { NotFoundComponent } from './error-pages/notfound/not-found.component';
 
 /*
   To start running, enter 'npm start'
@@ -21,16 +18,7 @@ import { FooterComponent } from './public/layout/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-
-    // Shared Items
-    HeaderComponent,
-    FooterComponent,
-
-    // Public Items
-    PublicComponent,
-      HomeComponent
-
-    // Admin Items
+    NotFoundComponent
   ],
   imports: [
     AppRoutes,

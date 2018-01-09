@@ -1,5 +1,6 @@
 <div>This is the HEADER</div>
 <ul class="navbar-header">
-    <li class="navbar-active"><a [routerLink]="['/home']">Home</a></li>
-    <li><a [routerLink]="['/404']">404</a></li>
+    <li *ngFor="let menuRoute of navbarConfig.menuRoutes; let i = index" [ngClass]="{ 'navbar-active': menuRoute.isActive }">
+        <a [routerLink]="[menuRoute.route]">{{menuRoute.displayText}}</a>
+    </li>
 </ul>

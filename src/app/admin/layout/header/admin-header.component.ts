@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
     selector: 'app-admin-header',
     templateUrl: './admin-header.component.html'
 })
-export class AdminHeaderComponent implements OnInit {
-    ngOnInit(){
 
-    }
+export class AdminHeaderComponent implements OnInit {
+    ngOnInit() {}
 }
